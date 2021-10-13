@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+
+}
+
+button {
+  margin: 16px 8px;
+ 
+}
+
+#editar {
+  left: 300px;
+  background: red;
+  color: white;
+}
+
+#eliminar {
+  left: 300px;
+  justify-content: center;
+  background: blue;
+  color: yellow;
+  
+}
+
+#action {
+
+  text-align: center;
+  font-size: 20pt;
+  color: black;
+}
