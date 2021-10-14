@@ -7,6 +7,7 @@ import { TablaAlumnosComponent } from './tabla-alumnos/tabla-alumnos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -19,6 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatCheckboxModule,
     MatTableModule,
     MatButtonModule
 
