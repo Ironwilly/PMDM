@@ -8,13 +8,27 @@ button {
  
 }
 
-#editar {
+#editar  {
+  left: 300px;
+  background: red;
+  color: white;
+}
+
+#editarref  {
   left: 300px;
   background: red;
   color: white;
 }
 
 #eliminar {
+  left: 300px;
+  justify-content: center;
+  background: blue;
+  color: yellow;
+  
+}
+
+#eliminarref {
   left: 300px;
   justify-content: center;
   background: blue;

@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="dataSource" >
+<table mat-table [dataSource]="dataSource">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -29,17 +29,17 @@
 
   <ng-container matColumnDef="curso">
     <th mat-header-cell *matHeaderCellDef> curso </th>
- 
+
     <td mat-cell *matCellDef="let element"> {{element.curso}} </td>
   </ng-container>
 
 
   <ng-container matColumnDef="action">
     <th id="action" mat-header-cell *matHeaderCellDef> action </th>
-  
-    <td mat-cell *matCellDef="let row"> 
-      <button id="editar" mat-raised-button> Editar </button>
-      <button id="eliminar" mat-raised-button> Eliminar </button> 
+
+    <td mat-cell *matCellDef="let row">
+      <button id="editar" mat-raised-button><a id="editarref" href="https://angular.io/">Editar</a> </button>
+      <button id="eliminar" mat-raised-button><a id="eliminarref" href="https://angular.io/"> Eliminar </a></button>
     </td>
   </ng-container>
 
@@ -49,6 +49,3 @@
 
 
 </table>
-
-
-
