@@ -1,0 +1,41 @@
+<p>
+    <mat-toolbar color="primary">
+        <button id="boton" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Pantalla Login Angular</span>
+        <span class="example-spacer"></span>
+
+    </mat-toolbar>
+</p>
+
+
+<p>
+    <mat-form-field appearance="legacy">
+        <mat-label>Escribe tu email</mat-label>
+        <input matInput placeholder="tuemail@gmail.com" [(ngModel)]= "email" name="email">
+        <mat-icon matSuffix><span class="material-icons-outlined">
+                mail
+            </span></mat-icon>
+
+    </mat-form-field>
+</p>
+<div class="example-container">
+    <mat-form-field appearance="fill">
+        <mat-label>Escribe tu contraseña</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]= "clave" name="contraseña">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <section>
+
+        <div class="example-button-row">
+
+            <button mat-raised-button color="primary" (click)="imprimirLog()">Inicio</button>
+
+
+        </div>
+    </section>
