@@ -35,6 +35,7 @@ const ALUMNOS_DATA: TablaAlumnos[] = [
 })
 export class TablaAlumnosComponent implements OnInit {
 
+  displayedOriginalColumns: string[] = ['id', 'nombre', 'apellidos', 'edad','curso','action'];
   displayedColumns: string[] = ['id', 'nombre', 'apellidos', 'edad','curso','action'];
   dataSource = ALUMNOS_DATA;
 
@@ -54,44 +55,23 @@ export class TablaAlumnosComponent implements OnInit {
   }
 
 
-  /**
-  TablaAlumnos: TablaAlumnos = {
-    name: 'Indeterminate',
-    completed: false,
-    color: 'primary',
-    subAlum: [
-      {name: 'Primary', completed: false, color: 'primary'},
-      {name: 'Accent', completed: false, color: 'accent'},
-      {name: 'Warn', completed: false, color: 'warn'}
-    ]
+  checkBoxChange(isChecked: boolean, columnNombre: string) {
+
+    if (isChecked){
+
+      this.displayedColumns.splice(this.displayedOriginalColumns.indexOf(columnNombre),0,'nombre');
 
 
-  };
+    } else{
 
+      this.displayedColumns.splice(this.displayedColumns.indexOf(columnNombre),1);
 
-
-  allComplete: boolean = false;
-
-  updateAllComplete() {
-    this.allComplete = this.TablaAlumnos.subAlum != null && this.TablaAlumnos.subAlum.every(t => t.completed);
-  }
-
-  someComplete(): boolean {
-    if (this.TablaAlumnos.subAlum == null) {
-      return false;
     }
-    return this.TablaAlumnos.subAlum.filter(t => t.completed).length > 0 && !this.allComplete;
-  }
 
-  setAll(completed: boolean) {
-    this.allComplete = completed;
-    if (this.TablaAlumnos.subAlum == null) {
-      return;
-    }
-    this.TablaAlumnos.subAlum.forEach(t => t.completed = completed);
-  }
 
-  */
+
+
+  }
 
 }
 
