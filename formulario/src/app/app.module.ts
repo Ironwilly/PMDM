@@ -7,11 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { MaterialImportsModule } from './module/material-imports.module';
 import { FormsModule } from '@angular/forms';
+import { RegistrerComponent } from './registrer/registrer.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrerComponent
     
   ],
   imports: [
@@ -19,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialImportsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],

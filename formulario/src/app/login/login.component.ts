@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,21 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-
-  email = '';
-  clave = '';
+  
+  
   hide = true;
 
-  constructor() { }
+  loginDto = new AuthLoginDto();
+
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
+  doLogin(){
 
-  imprimirLog() {
-    
-      console.log(this.email,this.clave);
-    };
+    this.authService.login(this.loginDto).suscribe(loginResult => {
+
+      alert(`Has conseguido logarte, y tu token es ${loginResult.token}`)
+    });
+  }
+  
   }
 
 
