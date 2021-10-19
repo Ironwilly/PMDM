@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthLoginDto } from '../models/dto/auth.dto';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -8,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  
-  
+
+
   hide = true;
 
   loginDto = new AuthLoginDto();
@@ -22,17 +24,17 @@ export class LoginComponent implements OnInit {
 
   doLogin(){
 
-    this.authService.login(this.loginDto).suscribe(loginResult => {
+    this.authService.login(this.loginDto).subscribe(loginResult => {
 
       alert(`Has conseguido logarte, y tu token es ${loginResult.token}`)
     });
   }
-  
+
   }
 
 
 
 
- 
+
 
 

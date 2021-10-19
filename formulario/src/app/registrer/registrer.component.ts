@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthRegistrerDto } from '../models/dto/auth.dto';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-registrer',
@@ -12,14 +14,26 @@ export class RegistrerComponent implements OnInit {
   usuario = '';
   hide = true;
 
-  constructor() { }
+  registrerDto = new AuthRegistrerDto();
+
+
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  imprimirLog() {
-    
-    console.log(this.email,this.clave);
-  };
+
+  doRegistrer(){
+
+    this.authService.registrer(this.registrerDto).subscribe(() =>{
+
+      alert(`Registro exitoso! `);
+    })
+
+
+  }
+
+
 
 }

@@ -39,14 +39,7 @@ export class TablaAlumnosComponent implements OnInit {
   displayedColumns: string[] = ['id', 'nombre', 'apellidos', 'edad','curso','action'];
   dataSource = ALUMNOS_DATA;
 
-  isShown: boolean = false ; // hidden by default
 
-
-  toggleShow() {
-
-  this.isShown = ! this.isShown;
-
-  }
 
 
   constructor() {  }
@@ -59,7 +52,7 @@ export class TablaAlumnosComponent implements OnInit {
 
     if (isChecked){
 
-      this.displayedColumns.splice(this.displayedOriginalColumns.indexOf(columnNombre),0,'nombre');
+      this.displayedColumns.splice(this.displayedOriginalColumns.indexOf(columnNombre),0,columnNombre);
 
 
     } else{
@@ -67,6 +60,9 @@ export class TablaAlumnosComponent implements OnInit {
       this.displayedColumns.splice(this.displayedColumns.indexOf(columnNombre),1);
 
     }
+
+
+
 
 
 

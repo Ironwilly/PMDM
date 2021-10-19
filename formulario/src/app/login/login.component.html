@@ -23,7 +23,7 @@
 <div class="example-container">
     <mat-form-field appearance="fill">
         <mat-label>Escribe tu contraseña</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]= "loginDto.clave" name="contraseña">
+        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]= "loginDto.password" name="contraseña">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
             [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -34,7 +34,7 @@
 
         <div class="example-button-row">
 
-            <button mat-raised-button color="primary" (click)="imprimirLog()">Registrar</button>
+            <button mat-raised-button color="primary" (click)="doLogin">Entrar</button>
 
 
         </div>

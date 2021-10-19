@@ -12,7 +12,7 @@
 <p>
     <mat-form-field appearance="legacy">
         <mat-label>Escribe tu usuario</mat-label>
-        <input matInput  [(ngModel)]= "email" name="usuario">
+        <input matInput  [(ngModel)]= "registrerDto.username" name="usuario">
         <mat-icon matSuffix><span class="material-icons">
             person_outline
             </span></mat-icon>
@@ -22,7 +22,7 @@
 <p>
     <mat-form-field appearance="legacy">
         <mat-label>Escribe tu email</mat-label>
-        <input matInput placeholder="tuemail@gmail.com" [(ngModel)]= "email" name="email">
+        <input matInput placeholder="tuemail@gmail.com" [(ngModel)]= "registrerDto.email" name="email">
         <mat-icon matSuffix><span class="material-icons-outlined">
                 mail
             </span></mat-icon>
@@ -32,7 +32,7 @@
 <div class="example-container">
     <mat-form-field appearance="fill">
         <mat-label>Escribe tu contraseña</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]= "clave" name="clave">
+        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]= "registrerDto.password" name="clave">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
             [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -42,7 +42,7 @@
     <div class="example-container">
         <mat-form-field appearance="fill">
             <mat-label>Repite tu contraseña</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]= "clave" name="contraseña">
+            <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]= "registrerDto.password" name="contraseña">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                 [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -53,7 +53,7 @@
 
         <div class="example-button-row">
 
-            <button mat-raised-button color="primary" (click)="imprimirLog()">Registrar</button>
+            <button mat-raised-button color="primary" (click)="doRegistrer">Registrar</button>
 
 
         </div>

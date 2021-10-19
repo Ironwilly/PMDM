@@ -1,21 +1,18 @@
 table {
-
   width: 100%;
-
 }
 
 button {
   margin: 16px 8px;
-
 }
 
-#editar  {
+#editar {
   left: 300px;
   background: red;
   color: white;
 }
 
-#editarref  {
+#editarref {
   left: 300px;
   background: red;
   color: white;
@@ -26,7 +23,6 @@ button {
   justify-content: center;
   background: blue;
   color: yellow;
-
 }
 
 #eliminarref {
@@ -34,11 +30,9 @@ button {
   justify-content: center;
   background: blue;
   color: yellow;
-
 }
 
 #action {
-
   text-align: center;
   font-size: 20pt;
   color: black;
