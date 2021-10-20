@@ -36,9 +36,9 @@
 <p>Desplegable que muestra la lista de los 50 primeros pokemon</p>
 <mat-form-field appearance="fill">
     <mat-label>Elementos por página</mat-label>
-    <mat-select [(ngModel)]="pokemonNumberSelected">
-        <mat-option *ngFor="let pokemon of pokemonList; let i = index">{{i}}: {{pokemon.name}}></mat-option>
-        
+    <mat-select [(ngModel)]="pokemonNumberSelected" (click)="getPokemons(50)" >
+        <mat-option value="i" *ngFor="let pokemon of pokemonList; let i = index">{{i}}: {{pokemon.name}}</mat-option>
+
     </mat-select>
 </mat-form-field>
 
