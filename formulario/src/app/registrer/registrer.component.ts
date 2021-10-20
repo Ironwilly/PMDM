@@ -26,8 +26,7 @@ export class RegistrerComponent implements OnInit {
 
   doRegistrer(){
 
-    this.authService.registrer(this.registrerDto).subscribe(() =>{
-
+    this.authService.registrer(this.registrerDto).subscribe(resultado =>{
       alert(`Registro exitoso! `);
     })
 
