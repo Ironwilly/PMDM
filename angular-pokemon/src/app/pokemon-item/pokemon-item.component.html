@@ -1,0 +1,17 @@
+
+
+<mat-card class="example-card">
+  <mat-card-header>
+
+    <mat-card-title><h1>Pokemon Card</h1></mat-card-title>
+    <mat-card-subtitle>{{i+1}}: {{pokemonInput?.name}}</mat-card-subtitle>
+  </mat-card-header>
+
+
+  <li><img [src]="getPokemonPhotoUrl(pokemonInput?.url)" width="300px" /></li>
+  <mat-card-content>
+    <li><img [src]="getPokemonPhotoUrl(pokemonInput?.url)" width="80px" /></li>
+
+  </mat-card-content>
+
+</mat-card>
