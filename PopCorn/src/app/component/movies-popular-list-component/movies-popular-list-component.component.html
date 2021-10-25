@@ -1,0 +1,11 @@
+
+
+
+<button mat-stroked-button (click)="getPeliculasPopulares()">Lista peliculas</button>
+https://api.themoviedb.org/3/movie/popular?api_key=75a43a37837f9668ea1aed215a226522&language=es-ES&page=1
+
+
+
+<ul>
+    <li *ngFor="let movies of moviesList; let i = index">{{i}}: {{pokemon.name}}</li>
+</ul>
