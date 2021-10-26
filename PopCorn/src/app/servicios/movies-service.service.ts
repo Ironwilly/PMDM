@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';P
 
 
 const urlBaseMovies = `${environment.apiBaseUrl}`;
@@ -20,3 +20,5 @@ export class MoviesServiceService {
       let url = `${urlBaseMovies}/details?api_key=${environment.apiKey}`;
     }
 }
+
+
