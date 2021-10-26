@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Result } from '../models/interfaces/people-popular';
+import { person } from '../models/interfaces/people-popular';
+
 import { PersonService } from '../services/person.service';
 
 @Component({
@@ -8,17 +9,22 @@ import { PersonService } from '../services/person.service';
   styleUrls: ['./person-popular-list-component.component.css']
 })
 export class PersonPopularListComponentComponent implements OnInit {
-  popularPerson: Result[] = [];
+  personList: person[] | undefined
 
   constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
 
+    this.getPersons();
+  }
+
+  getPersons(){
+
     this.personService.getPopularPerson().subscribe(popularPersonResponse =>{
-      this.popularPerson = popularPersonResponse.results;
+      this.personList = popularPersonResponse.results;
       }  );
   }
 
-  
+
 
 }

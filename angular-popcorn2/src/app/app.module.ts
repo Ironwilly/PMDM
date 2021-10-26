@@ -10,6 +10,8 @@ import { MaterialImportsModule } from './modules/material-imports.module';
 import { MoviesPopularListComponent } from './components/movies-popular-list/movies-popular-list.component';
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { PersonPopularListComponentComponent } from './person-popular-list-component/person-popular-list-component.component';
+import { PersonItemComponent } from './person-item/person-item/person-item.component';
+
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { PersonPopularListComponentComponent } from './person-popular-list-compo
     MovieItemComponent,
     MoviesPopularListComponent,
     PersonPopularListComponentComponent,
-    
+    PersonItemComponent,
+
+
   ],
   imports: [
     BrowserModule,

@@ -2,23 +2,23 @@
 
 export interface PersonPopularResponse {
     page:          number;
-    results:       Result[];
+    results:       person[];
     total_pages:   number;
     total_results: number;
 }
 
-export interface Result {
+export interface person {
     adult:                boolean;
     gender:               number;
     id:                   number;
-    known_for:            KnownFor[];
+    known_for:            personDetail[];
     known_for_department: KnownForDepartment;
     name:                 string;
     popularity:           number;
     profile_path:         string;
 }
 
-export interface KnownFor {
+export interface personDetail {
     adult?:            boolean;
     backdrop_path?:    string;
     genre_ids:         number[];
