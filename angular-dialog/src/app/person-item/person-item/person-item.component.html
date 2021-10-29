@@ -1,0 +1,14 @@
+
+  <h3>{{personInput?.name}}</h3>
+
+
+
+
+  <img mat-card-image [src]="imagenPerson(personInput?.profile_path)" >
+  <hr><br>
+
+
+ <span *ngFor="let person of personInput?. known_for">{{person.name}} </span>
+
+
+

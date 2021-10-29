@@ -1,0 +1,9 @@
+<ng-container *ngIf="movie">
+    <h1 mat-dialog-title>Detalle Pelicula</h1>
+    <div mat-dialog-content>
+
+        <img [src]="getMovieImg()" width="100px" />
+
+        {{movie?.title}}
+    </div>
+</ng-container>
