@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { person, personDetail } from 'src/app/models/interfaces/people-popular';
 import { PersonService } from 'src/app/services/person.service';
+import {PersonPopularResponse} from 'src/app/models/interfaces/people-popular'
 
 @Component({
   selector: 'app-person-item',
@@ -13,6 +14,7 @@ export class PersonItemComponent implements OnInit {
     @Input() personDetailInput:personDetail | undefined;
 
     constructor(private personService: PersonService) { }
+    
 
     ngOnInit(): void {
     }

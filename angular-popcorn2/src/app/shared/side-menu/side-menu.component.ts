@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./side-menu.component.css']
 })
 export class SideMenuComponent implements OnInit {
-  currentPage = 'movies';
+  currentPage = 'profile';
 
   constructor(private router: Router, private dialog: MatDialog) { }
 

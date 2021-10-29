@@ -14,4 +14,14 @@ export class MovieItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  imagenMovie(moviePath: String | undefined) :string{
+    if(moviePath){
+      let result = `http://image.tmdb.org/t/p/w500/${moviePath}`;
+    return result;
+    }
+    else{
+      return '';
+    }
+  }
+
 }

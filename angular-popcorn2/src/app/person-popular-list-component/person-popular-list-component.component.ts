@@ -15,10 +15,10 @@ export class PersonPopularListComponentComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getPersons();
+    this.getPerson();
   }
 
-  getPersons(){
+  getPerson(){
 
     this.personService.getPopularPerson().subscribe(popularPersonResponse =>{
       this.personList = popularPersonResponse.results;
