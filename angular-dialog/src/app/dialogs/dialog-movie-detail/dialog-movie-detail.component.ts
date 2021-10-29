@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Movie } from 'src/app/models/interfaces/movies-popular.interface';
+import { Movie, MoviesPopularResponse } from 'src/app/models/interfaces/movies-popular.interface';
 import { MoviesService } from 'src/app/services/movies.service';
 import { environment } from 'src/environments/environment';
 
@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class DialogMovieDetailComponent implements OnInit {
 
-  movie!:Movie;
+  movie!: MoviesPopularResponse;
   constructor(@Inject(MAT_DIALOG_DATA) private data: DialogMovieDetailComponent,
   private moviesService: MoviesService) { }
 
