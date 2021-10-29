@@ -11,6 +11,7 @@ import { MoviesPopularListComponent } from './components/movies-popular-list/mov
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { PersonPopularListComponentComponent } from './person-popular-list-component/person-popular-list-component.component';
 import { PersonItemComponent } from './person-item/person-item/person-item.component';
+import { SideMenuComponent } from './shared/side-menu/side-menu.component';
 
 
 
@@ -22,6 +23,7 @@ import { PersonItemComponent } from './person-item/person-item/person-item.compo
     MoviesPopularListComponent,
     PersonPopularListComponentComponent,
     PersonItemComponent,
+    SideMenuComponent,
 
 
   ],
