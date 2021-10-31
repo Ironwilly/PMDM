@@ -1,9 +1,10 @@
-<ng-container *ngIf="movie">
-    <h1 mat-dialog-title>Detalle Pelicula</h1>
-    <div mat-dialog-content>
 
-        <img [src]="getMovieImg()" width="100px" />
+<img mat-card-image [src]="imagenMovie(movieInput?.poster_path)" >
+<h3>{{movieInput?.title}}</h3>
+<h5>Puntuación: {{movieInput?.vote_average}} </h5>
+<h5> Popularidad: {{movieInput?.popularity}}</h5>
 
-        {{movie?.title}}
-    </div>
-</ng-container>
+<h5> Nº votos: {{movieInput?.vote_count}}</h5>
+
+<p><b>Sinopsis:</b> {{movieInput?.overview}}</p>
+

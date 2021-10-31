@@ -1,0 +1,13 @@
+h3{
+  text-align: center;
+}
+
+
+img {
+  display: block;
+  width: 100px;
+  margin: auto;
+
+  border: 2px solid red;
+
+}

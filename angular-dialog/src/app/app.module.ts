@@ -12,7 +12,7 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { PersonPopularListComponentComponent } from './person-popular-list-component/person-popular-list-component.component';
 import { PersonItemComponent } from './person-item/person-item/person-item.component';
 import { SideMenuComponent } from './shared/side-menu/side-menu.component';
-import { DialogMovieDetailComponent } from './dialogs/dialog-movie-detail/dialog-movie-detail.component';
+import { DialogMovieDetail } from './dialogs/dialog-movie-detail/dialog-movie-detail.component';
 
 
 
@@ -25,7 +25,7 @@ import { DialogMovieDetailComponent } from './dialogs/dialog-movie-detail/dialog
     PersonPopularListComponentComponent,
     PersonItemComponent,
     SideMenuComponent,
-    DialogMovieDetailComponent,
+    DialogMovieDetail,
 
 
   ],
@@ -37,7 +37,7 @@ import { DialogMovieDetailComponent } from './dialogs/dialog-movie-detail/dialog
     HttpClientModule
   ],
   entryComponents: [
-    DialogMovieDetailComponent
+    DialogMovieDetail
   ],
   providers: [],
   bootstrap: [AppComponent]
