@@ -11,6 +11,8 @@ import { MoviesPopularListComponent } from './components/movies-popular-list/mov
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { DialogComponent } from './components/dialog/dialog.component';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     AppComponent,
     MoviesPopularListComponent,
     MovieItemComponent,
-    
+    DialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -35,9 +38,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       outerStrokeColor: "#78C000",
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
-      
+
     })
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

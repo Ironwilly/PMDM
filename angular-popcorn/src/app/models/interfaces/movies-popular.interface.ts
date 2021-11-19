@@ -8,6 +8,7 @@ export interface MoviesPopularResponse {
 }
 
 export interface Movie {
+    name: any;
     adult:             boolean;
     backdrop_path:     string;
     genre_ids:         number[];

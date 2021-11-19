@@ -2,6 +2,8 @@
     height: 400px;
     overflow: auto;
     display: flex;
+    padding: 10px;
+    
 }
 
 .movie-item {
