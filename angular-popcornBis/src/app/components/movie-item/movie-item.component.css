@@ -1,0 +1,33 @@
+img {
+  object-fit: cover;
+}
+
+.tarjeta {
+  margin: 0 auto;
+}
+
+.overview {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.circle-progress {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+
+
+
+}
