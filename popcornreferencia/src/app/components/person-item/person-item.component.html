@@ -1,0 +1,10 @@
+
+<mat-card>
+    <mat-card-content>
+        <img [src]="getPersonImageUrl(PersonInput)" height="200px" width="100%" />
+        <h3>{{PersonInput.name}}</h3>
+       <button><a routerLink= "/person/{{PersonInput.id}}">
+        Detalles
+        </a></button> 
+    </mat-card-content>
+</mat-card>

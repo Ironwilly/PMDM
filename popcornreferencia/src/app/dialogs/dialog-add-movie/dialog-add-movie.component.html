@@ -1,0 +1,29 @@
+
+    <ng-container *ngIf="movie">
+        <h1 mat-dialog-title>Añadir pelicula</h1>
+        <div mat-dialog-content>
+
+            <h1>Título: {{movie?.title}}</h1>
+            <label for="lista">Listas de peliculas:</label>
+                
+            
+            
+                <select [(ngModel)]="idlista" name="idlista">
+                    
+                    <option *ngFor="let lista of listadelistas" value={{lista?.id}}> {{lista?.name}} {{lista?.item_count}}</option>
+                </select>
+
+                <button type="submit" (click)="postAddMovie(movie.id)" mat-raised-button color="primary">Guardar</button>
+
+            <h2>Crear Lista Nueva</h2>
+            <mat-label>Name</mat-label>
+            <input type="text" matInput [(ngModel)]="createdtolist.name" id="name">
+
+            <mat-label>Descripcion</mat-label>
+            <input type="text"  matInput [(ngModel)]="createdtolist.description" id="description">
+
+            <button type="submit" (click)="postCreateList()" mat-raised-button color="primary">Crear</button>
+
+        </div>
+    </ng-container>
+
