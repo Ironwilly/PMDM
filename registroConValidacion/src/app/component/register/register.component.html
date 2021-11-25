@@ -1,0 +1,119 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+
+		<h3>Inicio de sesión - Formulario reactivo</h3>
+		<label>Username</label>
+		<input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid':  form.username.errors }" />
+		<div *ngIf="form.username.errors" class="invalid-feedback">
+			<div *ngIf="form.username.errors.required">El nombre es obligatorio</div>
+		</div>
+		<label>Email</label>
+		<input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': form.email.errors }" />
+		<div *ngIf="form.email.errors" class="invalid-feedback">
+			<div *ngIf="form.email.errors.required">El email es obligatorio</div>
+			<div *ngIf="form.email.errors.email">El email debe de ser válido</div>
+		</div>
+
+		<label>Password</label>
+		<input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': form.password.errors }" />
+		<div *ngIf="form.password.errors" class="invalid-feedback">
+			<div *ngIf="form.password.errors.required">Password is required</div>
+			<div *ngIf="form.password.errors.minlength">Password must be at least 6 characters</div>
+		</div>
+
+		
+		<div class="text-center">
+			<button class="btn btn-primary mr-1" [disabled]="registerForm.invalid">Registrarse</button>
+			<button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+		</div>
+	</form>
+	<form (ngSubmit)="submit()" #forma="ngForm">
+		
+		<hr />
+		<label for="name"><b>Nombre de usuario</b></label>
+		<input
+            type="text"
+            #username="ngModel"
+            [(ngModel)]="register.username"
+            placeholder="Introduzca su nombre de usuario"
+            name="username"
+            minlength="5"
+            class="form-control"
+            required
+            [ngClass]="{'is-valid': !username.invalid, 'is-invalid': username.invalid}"
+          />
+
+		<div class="invalid-feedback" *ngIf="username.invalid && (username.dirty || username.touched)">
+			<div *ngIf="username.errors.minlength">
+				Introduzca un nombre de usuario con 5 caracteres mínimo
+			</div>
+			<div *ngIf="username.errors.required">
+				Introduzca un nombre de usuario válido por favor
+			</div>
+		</div>
+		<label for="email"><b>Correo electrónico</b></label>
+		<input
+            type="email"
+            #email="ngModel"
+            [(ngModel)]="register.email"
+            placeholder="Introduzca un correo electrónico"
+            name="email"
+            class="form-control"
+            required
+            [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid}"
+            pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          />
+
+		<div class="invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
+			<div *ngIf="email.errors.required">
+				Introduzca un correo electrónico válido por favor {{ email.value }}
+			</div>
+			<div *ngIf="email.errors && email.errors.pattern">
+				El correo electrónico no sigue el formato correcto. Sigue este ejemplo: prueba@gmail.com
+				{{ email.value }}
+			</div>
+		</div>
+		<label for="psw"><b>Password</b></label>
+		<input
+            type="password"
+            placeholder="Introduzca la contraseña"
+            #password="ngModel"
+            [(ngModel)]="register.password"
+            name="password"
+            class="form-control"
+            required
+            [ngClass]="{'is-valid': !password.invalid, 'is-invalid': password.invalid}"
+          />
+		<div class="invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
+			<div *ngIf="password.errors.required">
+				Introduzca una contraseña por favor
+			</div>
+		</div>
+		
+		<br>
+		<div class="row">
+			<div class="col-lg">
+				<button type="submit" [disabled]="!forma.valid" class="signup-btn">Registrar</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--tutorial a seguir en la web https://mugan86.medium.com/formularios-en-angular-diferencias-template-y-reactive-forms-e37af5e30b81-->
