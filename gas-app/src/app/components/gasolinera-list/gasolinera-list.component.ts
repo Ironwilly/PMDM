@@ -8,18 +8,24 @@ import { GasolineraService } from 'src/app/services/gasolinera.service';
   styleUrls: ['./gasolinera-list.component.css']
 })
 export class GasolineraListComponent implements OnInit {
+
   gasolineraList: ListaEESSPrecio[] = [];
-  
+
 
   constructor(private gasolineraService : GasolineraService) { }
 
   ngOnInit(): void {
     this.gasolineraService.getGasolineras().subscribe(resp => {
-      console.log(resp);
-      let jsonString = JSON.stringify(resp);
-      let jsonStringReplaced = jsonString.replace(/Precio Gasoleo A/gi, 'precioGasoleA');
-      let jsonFinal = JSON.parse(jsonStringReplaced);
-      console.log(jsonFinal);
+      this.gasolineraList = this.gasolineraService.parseAnyToGasolineraListResponse(resp);
+      console.log(this.gasolineraList);
+    });
+  }
+
+  getGasolineras(){
+    this.gasolineraService.getGasolineras().subscribe(result =>{
+
+      this.gasolineraList = result.ListaEESSPrecio;
+
     });
   }
 

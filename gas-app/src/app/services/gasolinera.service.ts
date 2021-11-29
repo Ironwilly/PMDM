@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { GasolinerasListResponse } from '../models/interfaces/gasolineraList.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,11 @@ export class GasolineraService {
     return this.http.get<any>('https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/');
   }
 
-  parseAnyToGasolineraListResponse(json: string) {
-    
+  parseAnyToGasolineraListResponse(jsonString: string) {
+    let jsonStringReplaced = jsonString.replace(/Precio Gasoleo A/gi, 'precioGasoleA');
+    jsonStringReplaced = jsonStringReplaced.replace(/ListaEESSPrecio/gi, 'listaEESSPrecio');
+    let jsonFinal: GasolinerasListResponse = JSON.parse(jsonStringReplaced);
+    return jsonFinal.listaEESSPrecio;
   }
 
 
