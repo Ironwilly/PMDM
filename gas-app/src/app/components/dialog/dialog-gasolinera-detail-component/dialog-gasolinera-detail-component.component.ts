@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { GasolineraService } from 'src/app/services/gasolinera.service';
 
 @Component({
   selector: 'app-dialog-gasolinera-detail-component',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogGasolineraDetailComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }

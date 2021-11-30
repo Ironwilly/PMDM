@@ -18,11 +18,12 @@ export interface ListaEESSPrecio {
     precioGasolina95E5:             string;
     precioGasolina98E5:             string;
     provincia:                      string;
+    rotulo:                         string      
     ideess:                         string;
     idMunicipio:                    string;
     idProvincia:                    string;
     idccaa:                         string;
-    rotulo:                         string;
+                            
 }
 
 

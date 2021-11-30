@@ -1,10 +1,11 @@
 
 
 
-<ul>
-  <mat-card>
-    <mat-card-title *ngFor="let gasolinera of gasolineraList">{{gasolinera.municipio}}</mat-card-title>
-    <mat-card-subtitle>End</mat-card-subtitle>
+<ul fxLayout="row wrap" fxLayoutGap ="20px grid" fxFlexfill fxLayoutAlign="space-around">
+  
+    <app-gasolinera-item *ngFor="let gasolinera of gasolineraList" [gasolineraInput]= "gasolinera"></app-gasolinera-item>
+   
 
-  </mat-card>
+
 </ul>
+

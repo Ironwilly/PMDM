@@ -8,6 +8,7 @@ import { GasolineraItemComponent } from './components/gasolinera-item/gasolinera
 import { GasolineraListComponent } from './components/gasolinera-list/gasolinera-list.component';
 import { DialogGasolineraDetailComponentComponent } from './components/dialog/dialog-gasolinera-detail-component/dialog-gasolinera-detail-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
