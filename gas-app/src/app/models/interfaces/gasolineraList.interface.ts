@@ -21,7 +21,7 @@ export interface ListaEESSPrecio {
     rotulo:                         string      
     ideess:                         string;
     idMunicipio:                    string;
-    idProvincia:                    string;
+    IDprovincia:                    string;
     idccaa:                         string;
                             
 }

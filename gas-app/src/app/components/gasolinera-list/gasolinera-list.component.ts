@@ -23,15 +23,15 @@ export class GasolineraListComponent implements OnInit {
     this.gasolineraService.getGasolineras().subscribe(resp => {
       let jsonString = JSON.stringify(resp);
       this.gasolineraList = this.gasolineraService.parseAnyToGasolineraListResponse(jsonString);
-      this.gasolinerasFiltradas=this.gasolineraList;
+      this.gasolinerasFiltradas = this.gasolineraList;
       console.log(this.gasolinerasFiltradas)
       console.log(this.gasolineraList);
     });
     this.provinciasService.getProvincias().subscribe(res => {
       this.provincias = res;
     });
-   
-    this.filtroProvincias();
+
+    
   }
 
   getGasolineras() {
@@ -43,18 +43,17 @@ export class GasolineraListComponent implements OnInit {
   }
 
 
-
-
-
   filtroProvincias() {
-    this.gasolinerasFiltradas = this.gasolineraList.filter(result => result.idProvincia.includes(this.provinciasSeleccionada));
-  
+    console.log(this.gasolinerasFiltradas)
+    this.gasolinerasFiltradas=this.gasolineraList
+    this.gasolinerasFiltradas = this.gasolinerasFiltradas.filter(result => this.provinciasSeleccionada ==result.IDprovincia);
+
+    
+
     console.log(this.gasolinerasFiltradas)
     console.log(this.provinciasSeleccionada)
 
   }
-
-
 
 
 

@@ -27,7 +27,6 @@ export class GasolineraService {
     jsonStringReplaced = jsonStringReplaced.replace(/Precio Gasolina 95 E5/gi, 'precioGasolina95E5');
     jsonStringReplaced = jsonStringReplaced.replace(/Precio Gasolina 98 E5/gi, 'precioGasolina98E5');
     jsonStringReplaced = jsonStringReplaced.replace(/Provincia/gi, 'provincia');
-    jsonStringReplaced = jsonStringReplaced.replace(/IDPovincia/gi, 'idProvincia');
     jsonStringReplaced = jsonStringReplaced.replace(/Rótulo/gi, 'rotulo');
     jsonStringReplaced = jsonStringReplaced.replace(/IDEESS/gi, 'ideess');
     jsonStringReplaced = jsonStringReplaced.replace(/IDMunicipio/gi, 'idMunicipio');
