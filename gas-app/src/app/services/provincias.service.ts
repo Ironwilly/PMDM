@@ -13,7 +13,7 @@ export class ProvinciasService {
 
   constructor(private http:HttpClient) { }
 
-  getProvincias():Observable<Provincias[]>{
+  getProvincias(): Observable<Provincias[]>{
     return this.http.get<Provincias[]>(`https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/Listados/Provincias/`);
   }
 

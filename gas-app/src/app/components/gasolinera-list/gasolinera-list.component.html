@@ -2,8 +2,8 @@
 
 <mat-form-field class="margin" appearance="fill">
   <mat-label>Provincias</mat-label>
-  <mat-select [(ngModel)]="idProvincia">
-      <mat-option value={{provincia.IDPovincia}} *ngFor="let provincia of provincias">{{provincia.Provincia}}</mat-option>
+  <mat-select [(ngModel)]="provinciasSeleccionada">
+      <mat-option  *ngFor="let provincia of provincias" [value]="provincia.IDPovincia">{{provincia.Provincia}}</mat-option>
   </mat-select>
 </mat-form-field>
 <span (click)='filtroProvincias()'><button mat-raised-button color="primary"  >Buscar</button></span>
@@ -11,7 +11,7 @@
 
 <ul fxLayout="row wrap" fxLayoutGap ="20px grid" fxFlexfill fxLayoutAlign="space-around">
 
-    <app-gasolinera-item *ngFor="let gasolinera of gasolineraList" [gasolineraInput]= "gasolinera"></app-gasolinera-item>
+    <app-gasolinera-item *ngFor="let gasolinera of gasolinerasFiltradas" [gasolineraInput]= "gasolinera"></app-gasolinera-item>
 
 
 

@@ -13,30 +13,29 @@ export class GasolineraListComponent implements OnInit {
 
   gasolineraList: ListaEESSPrecio[] = [];
   provincias!: Provincias[];
-  idProvincia:string="";
+  idProvincia: string = "";
   gasolinerasFiltradas: ListaEESSPrecio[] = [];
-  gasolineras: any;
-  provinciasService: any;
+  provinciasSeleccionada: string = "";
 
-
-
-
-
-
-  constructor(private gasolineraService : GasolineraService, provinciasService: ProvinciasService) { }
+  constructor(private gasolineraService: GasolineraService, private provinciasService: ProvinciasService) { }
 
   ngOnInit(): void {
     this.gasolineraService.getGasolineras().subscribe(resp => {
       let jsonString = JSON.stringify(resp);
       this.gasolineraList = this.gasolineraService.parseAnyToGasolineraListResponse(jsonString);
+      this.gasolinerasFiltradas=this.gasolineraList;
+      console.log(this.gasolinerasFiltradas)
       console.log(this.gasolineraList);
     });
-
-     this.getProvincias();
+    this.provinciasService.getProvincias().subscribe(res => {
+      this.provincias = res;
+    });
+   
+    this.filtroProvincias();
   }
 
-  getGasolineras(){
-    this.gasolineraService.getGasolineras().subscribe(result =>{
+  getGasolineras() {
+    this.gasolineraService.getGasolineras().subscribe(result => {
 
       this.gasolineraList = result.ListaEESSPrecio;
 
@@ -45,13 +44,14 @@ export class GasolineraListComponent implements OnInit {
 
 
 
-  getProvincias(){
-    this.provinciasService.getProvincias().subscribe((result: { Provincias: Provincias[]; }) =>{
-      this.provincias=result.Provincias;
-    })
-  }
+
+
   filtroProvincias() {
-    this.gasolinerasFiltradas = this.gasolineras.filter((result: { idProvincia: string; }) => result.idProvincia == this.idProvincia);
+    this.gasolinerasFiltradas = this.gasolineraList.filter(result => result.idProvincia.includes(this.provinciasSeleccionada));
+  
+    console.log(this.gasolinerasFiltradas)
+    console.log(this.provinciasSeleccionada)
+
   }
 
 
