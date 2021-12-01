@@ -9,6 +9,8 @@ import { GasolineraListComponent } from './components/gasolinera-list/gasolinera
 import { DialogGasolineraDetailComponentComponent } from './components/dialog/dialog-gasolinera-detail-component/dialog-gasolinera-detail-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout'
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {FlexLayoutModule} from '@angular/flex-layout'
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialImportsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
